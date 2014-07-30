@@ -1,0 +1,46 @@
+.images-with-cropper .well {
+  padding-bottom: 0px;
+}
+
+.images-with-cropper .thumbnail img {
+  max-height: 80px;
+}
+
+.images-with-cropper .col-xs-2 {
+
+}
+
+.images-with-cropper .thumbnail {
+  border-width: 3px;
+}
+
+.images-with-cropper .thumbnail:hover {
+  border-width: 3px;
+}
+
+.images-with-cropper .cropping-image-frame {
+  width: 200px;
+  height: 200px;
+}
+
+.cropping-image-container {
+  padding: 0 20px;
+}
+
+.cropping-image-container .loading-image img {
+  width: 100%;
+}
+
+.loading-image.when-loading {
+  background-image: url("loading.gif");
+  background-position:center;
+  background-repeat: no-repeat;
+
+}
+.loading-image img {
+  display: block;
+}
+
+.loading-image.when-loading img {
+  display: none;
+}
