@@ -72,6 +72,10 @@ var LoadingImage = React.createClass({
 			width: (this.props.displayWidth || 32) + "px",
 		}
 
+		if(this.props.displayWidth == null) {
+			divStyles.height = "32px";
+		}
+
 		if(this.state.loadingClass == "" && this.props.displayWidth == null) {
 			divStyles = {}
 		}
