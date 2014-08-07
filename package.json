@@ -11,7 +11,7 @@
   "devDependencies": {
     "uglifyify": "^2.5.0",
     "browserify": "^5.9.1",
-    "reactify": "^0.14.0",
+    "reactify": "^0.14.0"
   },
   "scripts": {
     "build-examples": "browserify -e examples/index.jsx -t reactify -o examples/bundle.js -d",
