@@ -1,0 +1,37 @@
+{
+  "name": "qor3ui",
+  "version": "0.0.1",
+  "description": "Qor3 UI Components",
+  "main": "bootstrap.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "uglifyify": "^2.5.0",
+    "browserify": "^5.9.1",
+    "reactify": "^0.14.0",
+  },
+  "scripts": {
+    "build-examples": "browserify -e examples/index.jsx -t reactify -o examples/bundle.js -d",
+    "watch": "watchify examples/index.jsx -t reactify -o examples/bundle.js -v -d",
+    "watchjsx": "jsx --watch src/ ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theplant/qor3ui.git"
+  },
+  "keywords": [
+    "ui",
+    "widget"
+  ],
+  "author": {
+    "name": "Felix Sun"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theplant/qor3ui/issues"
+  },
+  "homepage": "https://github.com/theplant/qor3ui"
+}
