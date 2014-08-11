@@ -38,7 +38,7 @@ module.exports = React.createClass({displayName: "ButtonCheckboxGroup",
       );
     })
     return (
-      React.DOM.div({className: "btn-group", 'data-toggle': "buttons"},
+      React.DOM.div({className: "btn-group", 'data-toggle': "buttons"}, 
         checkboxes
       )
     );

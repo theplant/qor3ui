@@ -4,6 +4,7 @@ var React = require("react");
 var ButtonCheckboxGroup = require("../ButtonCheckboxGroup.js");
 var ImagesWithCropper = require("../ImagesWithCropper.js");
 var LoadingImage = require("../LoadingImage.js");
+var Select2 = require("../Select2.js");
 
 function buttonCheckedGroupChange(selectedIndex, options, evt) {
   console.log(selectedIndex, options)
@@ -19,6 +20,34 @@ var options1 = [
 
 React.renderComponent(
   <div>
+
+    <h3> Select2 with tags</h3>
+    <Select2 tags={["red", "green", "blue"]} width="80%"></Select2>
+
+    <h3> Select2 with remote ajax call </h3>
+    <Select2 placeholder="Select a github repository" ajax={{
+      url: "https://api.github.com/search/repositories",
+      dataType: "jsonp",
+      data: function(term, page){
+        return {
+          q: term,
+          sort: "stars",
+          order: "desc"
+        };
+      },
+      results: function(r, page) {
+        if(r.data.message) {
+          alert(r.data.message);
+          return{results: []};
+        }
+        return {results: r.data.items};
+      },
+      }} formatResult={function(d) {
+        return d.full_name;
+      }} formatSelection={function(d){
+        return d.full_name;
+      }} width="80%"></Select2>
+
     <h3>Alignment 1</h3>
     <ButtonCheckboxGroup options={options1} onChange={buttonCheckedGroupChange}></ButtonCheckboxGroup>
 
